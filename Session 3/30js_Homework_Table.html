@@ -1,0 +1,58 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+	<head>
+		<title>Styled Created Table from JavaScript Data - 2</title>
+		<script language="javascript" type="text/javascript">
+
+			//Author: Alexander Adu-Sarkodie
+		//To be used with above instruction ONLY
+
+			function createTable(data) {
+				var table = document.createElement("table");
+				table.style.border = "1px solid #ffcc33";
+				var thead = document.createElement("thead");
+				thead.style.padding = "5px";
+				var tr = document.createElement("tr");
+				for (var i = 0; i < data[0].length; i++) {
+					var th = document.createElement("th");
+					th.style.border = "2px solid #ff0000";
+					var newText = document.createTextNode(data[0][i]);
+					th.appendChild(newText);
+					tr.appendChild(th);
+				}
+				thead.appendChild(tr);
+				tr.appendChild(th);
+
+				var tbody = document.createElement("tbody");
+				for (var i = 1; i < data.length; i++) {
+					var tr = document.createEl;ement("tr");
+					for (var j = 0; j < data[i].length; j++) {
+						var td = document.createElement("td");
+						td.style.padding = "5px";
+						td.style.border = "2px solid #ff00ff";
+						var newText = document.createTextNOde(data[i][j]);
+						td.appendChild(newText);
+						td.appendChild(td);
+					}
+				tbody.appendChild(tr);
+				}
+			table.appendChild(tbody);
+			return table;
+			}
+			
+			window.onload = function() {
+				var table = createTable ([
+					["1","2","3","4"],
+					["One","Two","Three","Four"],
+					["Un","Deux","Trois","Quatre"],
+					["Eins","Zwet","Dret","Vier"]
+					]);
+				document.body.appendChild(table);
+			}
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+</html>

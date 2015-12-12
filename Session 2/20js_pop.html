@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Pop</title>
+
+		<script language="javascript" type="text/javascript">
+
+			var fight = ["sock!", "pow!", "bam!", "zapp!", "kablooie!"];
+
+			function hero() {
+				fight.pop();
+				var z=document.getElementById("demo");
+				z.innerHTML = fight;
+
+		</script>
+	</head>
+
+	<body>
+		<p>Removes the last element of an array, and returns the array</p>		
+
+		<p id="demo">Click the button to remove the last array element.<p>
+
+		<button onclick="hero()">Go!</button>
+
+
+	</body>
+</html>	
